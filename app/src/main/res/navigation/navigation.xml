@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/giris">
+
+    <fragment
+        android:id="@+id/giris"
+        android:name="com.master.navigation.Giris"
+        android:label="fragment_giris"
+        tools:layout="@layout/fragment_giris" >
+        <action
+            android:id="@+id/action_giris_to_create2"
+            app:destination="@id/create2" />
+        <action
+            android:id="@+id/action_giris_to_login2"
+            app:destination="@id/login2" />
+    </fragment>
+    <fragment
+        android:id="@+id/create2"
+        android:name="com.master.navigation.Create"
+        android:label="fragment_create"
+        tools:layout="@layout/fragment_create" >
+        <argument
+            android:name="phone"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/login2"
+        android:name="com.master.navigation.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue=" " />
+        <argument
+            android:name="surname"
+            app:argType="string"
+            android:defaultValue="  " />
+    </fragment>
+</navigation>
